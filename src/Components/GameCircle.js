@@ -5,12 +5,9 @@ const onClick = (ev, id) => {
   alert("On Click " + id);
 };
 
-const GameCircle = ({ id, color, children }) => {
-  const style = {
-    backgroundColor: color,
-  };
+const GameCircle = ({ id, children }) => {
   return (
-    <div style={style} className="gameCircle" onClick={(ev) => onClick(ev, id)}>
+    <div style={id % 2 === 0 ? {backgroundColor:"red"}: {backgroundColor:"blue"}} className="gameCircle" onClick={(ev) => onClick(ev, id)}>
       {children}
     </div>
   );
