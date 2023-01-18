@@ -6,7 +6,7 @@ A simple Connect 4 game built with React.js
 
 ## Getting Started
 
-1. Clone the repository: `git clone https://github.com/[username]/connect-4.git`
+1. Clone the repository: `git clone https://github.com/yuliussetyawan/connect-4.git`
 2. Install the dependencies: `npm install` or `yarn install`
 3. Start the development server: `npm start` or `yarn start`
 4. Open [http://localhost:3000](http://localhost:3000) to view the game in the browser.
@@ -23,8 +23,6 @@ A simple Connect 4 game built with React.js
 
 ## Author
 
-[Your Name](https://github.com/[username])
+[Yulius Setyawan](https://github.com/yuliussetyawan)
 
-## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
