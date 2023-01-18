@@ -3,8 +3,8 @@ import GameCircle from "./GameCircle";
 import "../Game.css";
 import Header from "./Header";
 import Footer from "./Footer";
-import { isWinner } from "../helper";
-import { GAME_STATE_PLAYING, GAME_STATE_WIN, NO_PLAYER, PLAYER_1, PLAYER_2, NO_CIRCLES } from "../Constants";
+import { isWinner, isDraw } from "../helper";
+import { GAME_STATE_PLAYING, GAME_STATE_WIN, GAME_STATE_DRAW, NO_PLAYER, PLAYER_1, PLAYER_2, NO_CIRCLES } from "../Constants";
 
 const GameBoard = () => {
   // create 16 array with default value of zero
@@ -32,6 +32,12 @@ const GameBoard = () => {
       setGameState(GAME_STATE_WIN);
       setWinPlayer(currentPlayer);
     }
+
+    if (isDraw(gameBoard, id ,currentPlayer)){
+      setGameState(GAME_STATE_DRAW);
+      setWinPlayer(NO_PLAYER);
+    }
+
     setGameBoard(prev => {
       return prev.map((circle, pos) => {
         if(pos === id) return currentPlayer;
