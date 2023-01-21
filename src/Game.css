@@ -60,13 +60,15 @@ body {
   width: 300px;
   margin-left: -120px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2,1fr);
 }
 
 .footer button {
+  position: relative;
+  left: 50%;
   margin-left: 5px;
   margin-top: 15px;
-  width: 140px;
+  width: 130px;
   height: 50px;
   background-color: lightblue;
   font-size: 20px;
