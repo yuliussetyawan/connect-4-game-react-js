@@ -1,27 +1,38 @@
-body{
-  background-color: cornflowerblue;
+:root {
+  --background-color: cornflowerblue;
+  --panel-background-color: lightgoldenrodyellow;
+  --panel-border-color: burlywood;
+  --board-background-color: bisque;
+  --board-border-color: burlywood;
+  --player-no-player: white;
+  --player-player-1: red;
+  --player-player-2: blue;
+}
+
+body {
+  background-color: var(--background-color);
   font-family: 'franklin gothic medium', 'arial narrow', arial, sans-serif;
 }
 
-.app-container{
+.app-container {
   width: 800px;
   height: 800px;
-  position:absolute;
+  position: absolute;
   left: 50%;
   top: 10%;
   margin-left: -400px;
 }
 
-.panel{
-  position:absolute;
-  background-color: lightgoldenrodyellow;
-  border: 8px solid burlywood;
-  -webkit-box-shadow: 7px 5px 15px 3px rgba(0,0,0,0.9);
+.panel {
+  position: absolute;
+  background-color: var(--panel-background-color);
+  border: 8px solid var(--panel-border-color);
+  -webkit-box-shadow: 7px 5px 15px 3px rgba(0, 0, 0, 0.9);
   box-shadow: 7px 5px 15px 3px;
   z-index: 1;
 }
 
-.header{
+.header {
   left: 50%;
   top: 90px;
   height: 80px;
@@ -42,7 +53,7 @@ body{
   transform: translate(-50%, -50%);
 }
 
-.footer{
+.footer {
   left: 50%;
   top: 750px;
   height: 80px;
@@ -52,7 +63,7 @@ body{
   grid-template-columns: 1fr 1fr;
 }
 
-.footer button{
+.footer button {
   margin-left: 5px;
   margin-top: 15px;
   width: 140px;
@@ -65,7 +76,7 @@ body{
   font-weight: bold;
 }
 
-.footer button:hover{
+.footer button:hover {
   background-color: chocolate;
 }
 
@@ -79,11 +90,11 @@ body{
   left: 50%;
   margin-left: -250px;
   top: 20%;
-  background-color: bisque;
-  border: 8px solid burlywood;
+  background-color: var(--board-background-color);
+  border: 8px solid var(--board-border-color);
   border-radius: 8%;
-  -webkit-box-shadow: 7px 5px 15px 3px rgba(0, 0, 0,0.9);
-  box-shadow: 7px 5px 15px 3px rgba(0,0,0,0.9);
+  -webkit-box-shadow: 7px 5px 15px 3px rgba(0, 0, 0, 0.9);
+  box-shadow: 7px 5px 15px 3px rgba(0, 0, 0, 0.9);
 }
 
 .gameCircle {
