@@ -22,6 +22,9 @@ A simple Connect 4 game built with React.js
 - [React.js](https://reactjs.org/) - JavaScript library for building user interfaces
 - [create-react-app](https://github.com/facebook/create-react-app) - A tool to set up a new React project with zero configuration
 
+## Deployment
+- The game is deployed on [Netlify](https://connect-4-react-js.netlify.app/)
+
 ## Author
 
 [Yulius Setyawan](https://github.com/yuliussetyawan)
