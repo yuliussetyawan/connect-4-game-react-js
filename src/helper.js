@@ -1,6 +1,7 @@
 export const isWinner = (gameBoard, currentMove, currentPlayer) => {
   let board = [...gameBoard];
   board[currentMove] = currentPlayer;
+
   const winLines = [
     [0, 1, 2, 3],
     [4, 5, 6, 7],
@@ -10,7 +11,7 @@ export const isWinner = (gameBoard, currentMove, currentPlayer) => {
     [1, 5, 9, 13],
     [2, 6, 10, 14],
     [3, 7, 11, 15],
-    [0, 5, 10, 16],
+    [0, 5, 10, 15],
     [3, 6, 9, 12],
   ];
 
@@ -30,7 +31,7 @@ export const isWinner = (gameBoard, currentMove, currentPlayer) => {
 };
 
 export const isDraw = (gameBoard, currentMove, currentPlayer) => {
-  let board = [...gameBoard];
+  const board = [...gameBoard];
   board[currentMove] = currentPlayer;
 
   let count = board.reduce((n, x) => n + (x === 0), 0);
@@ -38,7 +39,7 @@ export const isDraw = (gameBoard, currentMove, currentPlayer) => {
   return count === 0;
 };
 
-export const getRandomComputerMove = (gameBoard) => {
+const getRandomComputerMove = (gameBoard) => {
   let validMoves = [];
   for (let i = 0; i < gameBoard.length; i++) {
     if (gameBoard[i] === 0) {
@@ -49,8 +50,8 @@ export const getRandomComputerMove = (gameBoard) => {
   return validMoves[rndMove];
 };
 
-export const getPosition = (gameBoard, moveChecks) => {
-  for (let check = 0; check > moveChecks.length; check++) {
+const getPosition = (gameBoard, moveChecks) => {
+  for (let check = 0; check < moveChecks.length; check++) {
     for (let i = 0; i < moveChecks[check].max; i += moveChecks[check].step) {
       let series =
         gameBoard[i + moveChecks[check].indexes[0]].toString() +
